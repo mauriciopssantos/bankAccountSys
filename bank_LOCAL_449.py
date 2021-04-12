@@ -1,5 +1,4 @@
 import numpy as np
-import smtplib, ssl
 
 class bank_account:
     
@@ -13,21 +12,12 @@ class bank_account:
         self.check_number_monthly=20
         self.silver_type = " "
         self.gold_type = " "
-        self.password="hello"
-
     def reset_pin(self):
         choice=input(int("Press 1 if you forgot your pin or 2 to redefine it"))
         if choice==1:
             email=input("Write the email to receive the new pin:")
             if email==self.mail:
-                port = 465
-                password = input("Type your password and press enter: ")
-                self.pin=np.random.randn(6)
-                # Create a secure SSL context
-                context = ssl.create_default_context()
-                with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-                    server.login("my@gmail.com", password)
-                # TODO: Send email here
+                self.mail=np.ran
 
 
 

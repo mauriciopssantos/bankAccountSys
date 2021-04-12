@@ -2,7 +2,6 @@ import numpy as np
 import smtplib, ssl
 
 class bank_account:
-    
     def __init__(self, name, pin):
         self.name=name
         self.pin=pin
@@ -11,8 +10,6 @@ class bank_account:
         self.account_type=""
         self.balance=0
         self.check_number_monthly=20
-        self.silver_type = " "
-        self.gold_type = " "
         self.password="hello"
 
     def reset_pin(self):
@@ -29,23 +26,5 @@ class bank_account:
                     server.login("my@gmail.com", password)
                 # TODO: Send email here
 
-
-
-
-
-
-    def create_account(self):
-        self.address = input("Hello {} enter your address to create your account: ").format(self.name)
-        
-        while self.account_type != 1 or self.account_type != 2:
-            self.account_type= int(input("Choose your account type (enter one of the following numbers):\n1 - Silver Account : ...\n2 - Gold Account : ..."))
-            if self.account_type == 1:
-                self.account_type == self.silver_type
-            elif self.account_type ==2:
-                self.account_type == self.gold_type
-            else:
-                print("Please try again!")
-
-        self.balance = int(input("Enter a balance to activate your account: "))
 
 

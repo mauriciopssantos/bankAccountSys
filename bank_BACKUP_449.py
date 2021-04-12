@@ -11,10 +11,13 @@ class bank_account:
         self.account_type=""
         self.balance=0
         self.check_number_monthly=20
+<<<<<<< HEAD
         self.silver_type = " "
         self.gold_type = " "
+=======
         self.password="hello"
 
+>>>>>>> fae7c4060aa09e89d5f3205609dde0702ba8c42d
     def reset_pin(self):
         choice=input(int("Press 1 if you forgot your pin or 2 to redefine it"))
         if choice==1:
